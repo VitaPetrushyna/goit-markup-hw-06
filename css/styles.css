@@ -230,6 +230,7 @@ ul {
   padding: 10px 32px;
   margin-left: auto;
   margin-right: auto;
+  border: transparent;
 
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
@@ -480,6 +481,9 @@ ul {
 }
 
 /* Footer */
+.footer-one {
+  flex-grow: 1;
+}
 address {
   margin-top: 20px;
 }
@@ -603,6 +607,7 @@ address {
   color: var(--primary-bg-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: transparent;
 }
 
 .form-footer-div {
@@ -805,6 +810,7 @@ textarea {
   margin-right: auto;
 }
 .form-text {
+  margin-bottom: 2px;
   width: 448px;
   font-weight: 700;
   font-size: 20px;
@@ -815,10 +821,13 @@ textarea {
 }
 .form-field {
   position: relative;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
+.form-field:not(:first-child) {
+  margin-top: 10px;
+}
+
 .form-field input {
   width: 448px;
   height: 40px;
@@ -841,8 +850,22 @@ textarea {
 }
 .form-label {
   margin-bottom: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
 }
-
+.form-placeholder::placeholder {
+  margin-bottom: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
 .form-icon {
   position: absolute;
   top: 65%;
@@ -872,10 +895,21 @@ textarea {
   position: absolute;
 }
 .сheckbox-label {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
 }
 .сheckbox-icon {
   display: inline-block;
+  margin-right: 8px;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -889,7 +923,7 @@ textarea {
   background-origin: border-box;
 }
 .button-form {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 200px;
@@ -899,6 +933,7 @@ textarea {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: transparent;
 
   font-weight: 700;
   font-size: 16px;
